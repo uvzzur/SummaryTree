@@ -21,6 +21,10 @@ Chrome extension that turns selected text into a **traceable summary**: each bul
 2. Right-click → **Traceable summary**.
 3. Panel opens with summary items; click an item to expand and, at Level 3, see the source highlighted in the page.
 
+**In action**
+
+<img src="docs/screenshots/gif-demo.gif" alt="SummaryTree in action" width="700">
+
 **Summary panel with expandable items**
 
 ![Summary panel](docs/screenshots/light-panel-demo.png)
