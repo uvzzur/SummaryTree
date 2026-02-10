@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Traceable Summary – Settings</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; max-width: 780px; }
+      input, select { width: 100%; padding: 10px; font-size: 14px; }
+      button { padding: 10px 12px; margin-top: 10px; margin-right: 8px; }
+      .row { margin: 14px 0; }
+      .hint { font-size: 12px; opacity: 0.75; line-height: 1.4; }
+      .status { margin-top: 10px; }
+      code { background: #f2f2f2; padding: 2px 6px; border-radius: 6px; }
+      .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      @media (max-width: 720px) { .two { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <h2>Settings</h2>
+
+    <div class="row">
+      <label for="provider"><b>Provider</b></label><br/>
+      <select id="provider">
+        <option value="hf">Hugging Face (router)</option>
+        <option value="openai">OpenAI</option>
+        <option value="auto">Auto (HF if present, else OpenAI)</option>
+      </select>
+      <div class="hint">
+        HF uses <code>https://router.huggingface.co/v1</code> (OpenAI-compatible).
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="panelDefaultMode"><b>Default panel theme</b></label><br/>
+      <select id="panelDefaultMode">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <div class="hint">Theme used when the summary panel opens (you can still toggle in the panel).</div>
+    </div>
+
+    <div class="row">
+      <label for="panelDefaultFontScale"><b>Default text size</b></label><br/>
+      <select id="panelDefaultFontScale">
+        <option value="0.85">Small</option>
+        <option value="0.95">Slightly small</option>
+        <option value="1">Medium</option>
+        <option value="1.1">Slightly large</option>
+        <option value="1.25">Large</option>
+      </select>
+      <div class="hint">Base text size in the summary panel (you can still use A−/A+ in the panel).</div>
+    </div>
+
+    <div class="two">
+      <div class="row">
+        <label for="hfToken"><b>Hugging Face token</b></label><br/>
+        <input id="hfToken" type="password" placeholder="hf_..." autocomplete="off" />
+        <div class="hint">Create a token at Hugging Face → Settings → Access Tokens.</div>
+      </div>
+
+      <div class="row">
+        <label for="openaiKey"><b>OpenAI API key</b></label><br/>
+        <input id="openaiKey" type="password" placeholder="sk-..." autocomplete="off" />
+        <div class="hint">This is for the OpenAI API (separate billing/quota from ChatGPT).</div>
+      </div>
+    </div>
+
+    <button id="save">Save</button>
+    <button id="clear">Clear all</button>
+    <button id="clearCache">Clear cached summaries</button>
+
+    <div id="status" class="status"></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

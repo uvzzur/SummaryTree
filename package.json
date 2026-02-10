@@ -1,0 +1,16 @@
+{
+  "name": "summarytree",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Chrome extension: source-backed, expandable AI summaries.",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write \"*.js\" \"options/*.js\"",
+    "build": "echo 'No build step; load unpacked in Chrome.'"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-webextensions": "^4.0.0",
+    "prettier": "^3.2.0"
+  }
+}

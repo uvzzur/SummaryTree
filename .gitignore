@@ -1,0 +1,25 @@
+# Dependencies and build
+node_modules/
+dist/
+build/
+
+# Environment (API keys are in extension Options only)
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
+
+# Cursor-only; keep locally, not in repo
+context/
+
+# Junk / URL-saved artifacts
+chrome-extension:/
+pub.mdpi-res.com/

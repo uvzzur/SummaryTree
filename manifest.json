@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "SummaryTree",
+  "version": "0.4.0",
+  "description": "Source-backed, expandable AI summaries from selected text.",
+  "permissions": ["contextMenus", "storage", "activeTab"],
+  "host_permissions": ["https://router.huggingface.co/*", "https://api.openai.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "SummaryTree" },
+  "options_page": "options/options.html",
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["content.js"] }],
+  "web_accessible_resources": [{ "resources": ["panel.css"], "matches": ["<all_urls>"] }]
+}
