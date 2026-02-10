@@ -1,6 +1,12 @@
 {
   "manifest_version": 3,
   "name": "SummaryTree",
+  "icons": {
+   "16": "docs/icons/icon16.png",
+   "32": "docs/icons/icon32.png",
+   "48": "docs/icons/icon48.png",
+   "128": "docs/icons/icon128.png"
+  },
   "version": "0.4.0",
   "description": "Source-backed, expandable AI summaries from selected text.",
   "permissions": ["contextMenus", "storage", "activeTab"],
