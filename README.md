@@ -3,7 +3,7 @@
 Chrome extension that turns selected text into a **traceable summary**: each bullet maps back to a verbatim source excerpt and can be highlighted on the page. No backend; BYOK (Bring Your Own Key) for Hugging Face or OpenAI.
 
 <p align="center">
-  <img src="docs/Logo.png" alt="SummaryTree logo" width="200">
+  <img src="docs/Logo.png" alt="SummaryTree logo" width="400">
 </p>
 
 ## Features
